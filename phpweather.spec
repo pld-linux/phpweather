@@ -1,7 +1,7 @@
 # TODO:
 # - apache configuration, relocation to /usr/share
 Summary:	Shows the current weather conditions on your Web page
-Summary(pl):	Pokazuje aktualn± pogodê na Twojej stronie WWW
+Summary(pl):	Pokazywanie aktualnej pogody na stronie WWW
 Name:		phpweather
 Version:	2.2.2
 Release:	1
@@ -47,11 +47,11 @@ install *.csv		$RPM_BUILD_ROOT%{_phpdir}
 install config/*.php	$RPM_BUILD_ROOT%{_phpdir}/config
 install db/*.php	$RPM_BUILD_ROOT%{_phpdir}/db
 install db/files/*	$RPM_BUILD_ROOT%{_phpdir}/db/files
-install doc/*.html	$RPM_BUILD_ROOT%{_phpdir}/doc/
+install doc/*.html	$RPM_BUILD_ROOT%{_phpdir}/doc
 # info page to install:
 #install doc/
-install icons/*.gif	$RPM_BUILD_ROOT%{_phpdir}/icons/
-install output/*.php	$RPM_BUILD_ROOT%{_phpdir}/output/
+install icons/*.gif	$RPM_BUILD_ROOT%{_phpdir}/icons
+install output/*.php	$RPM_BUILD_ROOT%{_phpdir}/output
 
 touch $RPM_BUILD_ROOT%{_sysconfdir}/httpd/%{name}/defaults.php
 ln -s %{_sysconfdir}/httpd/%{name}/defaults.php $RPM_BUILD_ROOT%{_phpdir}/defaults.php

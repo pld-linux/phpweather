@@ -3,12 +3,12 @@
 Summary:	Shows the current weather conditions on your Web page
 Summary(pl):	Pokazuje aktualn± pogodê na Twojej stronie www
 Name:		phpweather
-Version:	2.2.1
+Version:	2.2.2
 Release:	1
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://dl.sourceforge.net/phpweather/%{name}-%{version}.tar.bz2
-# Source0-md5:	be7f03aead4bd632549b0822dd6d7afc
+# Source0-md5:	9294a521eb4f8d3c816f51446475ad7a
 URL:		http://www.phpweather.net/
 Requires:	webserver
 BuildArch:	noarch

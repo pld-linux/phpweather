@@ -24,13 +24,21 @@ makes it easily available in PHP scripts. You can display the data in
 several languages by using the included translations. You can also
 access the information with a WAP-enabled mobile phone.
 
+%description -l pl
+PHP Weather u³atwia pokazywanie aktualnej pogody na stronie WWW.
+Program pobiera ostatni raport pogodowy METAR i konwertuje jego format
+na jednostki zarówno imperialne, jak i metryczne, zapamiêtuje dane w
+bazie MySQL, PostgreSQL lub DBA w celu szybkiego odczytywania i czyni
+je ³atwo dostêpne dla skryptów PHP. Mo¿na wy¶wietlaæ dane w kilku
+jêzykach u¿ywaj±c za³±czonych t³umaczeñ. Mo¿na tak¿e dostaæ siê do
+tych informacji przy u¿yciu telefonu komórkowego z obs³ug± WAP.
+
 %prep
 %setup -q
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_phpdir}/{config,db/files,doc,icons,output}
-install -d $RPM_BUILD_ROOT
 
 install *.php		$RPM_BUILD_ROOT%{_phpdir}
 install *.css		$RPM_BUILD_ROOT%{_phpdir}

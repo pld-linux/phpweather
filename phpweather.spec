@@ -1,7 +1,7 @@
 # TODO:
 # - apache configuration, relocation to /usr/share
 Summary:	Shows the current weather conditions on your Web page
-Summary(pl):	Pokazuje aktualn± pogodê na Twojej stronie www
+Summary(pl):	Pokazuje aktualn± pogodê na Twojej stronie WWW
 Name:		phpweather
 Version:	2.2.2
 Release:	1

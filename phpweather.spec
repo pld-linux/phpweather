@@ -8,6 +8,7 @@ Release:	1
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://dl.sourceforge.net/phpweather/%{name}-%{version}.tar.bz2
+# Source0-md5:	731a695abedb220d809925b9295b8de7
 URL:		http://www.phpweather.net/
 Requires:	webserver
 BuildArch:	noarch

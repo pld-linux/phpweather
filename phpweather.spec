@@ -1,9 +1,9 @@
 # TODO:
-# - defaults.php should be config(noreplace)... and maybe ghost
+# - apache configuration, relocation to /usr/share
 Summary:	Shows the current weather conditions on your Web page
 Summary(pl):	Pokazuje aktualn± pogodê na Twojej stronie www
 Name:		phpweather
-Version:	2.1.0
+Version:	2.1.1
 Release:	1
 License:	GPL v2
 Group:		Applications/WWW
@@ -38,7 +38,7 @@ tych informacji przy u¿yciu telefonu komórkowego z obs³ug± WAP.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_phpdir}/{config,db/files,doc,icons,output}
+install -d $RPM_BUILD_ROOT{%{_phpdir}/{config,db/files,doc,icons,output},%{_sysconfdir}/httpd/%{name}}
 
 install *.php		$RPM_BUILD_ROOT%{_phpdir}
 install *.css		$RPM_BUILD_ROOT%{_phpdir}
@@ -52,14 +52,17 @@ install doc/*.html	$RPM_BUILD_ROOT%{_phpdir}/doc/
 install icons/*.gif	$RPM_BUILD_ROOT%{_phpdir}/icons/
 install output/*.php	$RPM_BUILD_ROOT%{_phpdir}/output/
 
-touch defaults.php
+touch $RPM_BUILD_ROOT%{_sysconfdir}/httpd/%{name}/defaults.php
+ln -s %{_sysconfdir}/httpd/%{name}/defaults.php $RPM_BUILD_ROOT%{_phpdir}/defaults.php
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS README ChangeLog doc/*.{pdf,txt)
+%doc AUTHORS README ChangeLog doc/*.{pdf,txt}
+%attr(644,root,root) %config(noreplace) %{_sysconfdir}/httpd/%{name}/defaults.php
+%dir %{_sysconfdir}/httpd/%{name}
 %dir %{_phpdir}
 %dir %{_phpdir}/config
 %dir %{_phpdir}/db

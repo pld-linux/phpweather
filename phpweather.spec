@@ -62,7 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS README ChangeLog doc/*.{pdf,txt}
-%attr(644,root,root) %config(noreplace) %{_sysconfdir}/httpd/%{name}/defaults.php
+%config(noreplace) %{_sysconfdir}/httpd/%{name}/defaults.php
 %dir %{_sysconfdir}/httpd/%{name}
 %dir %{_phpdir}
 %dir %{_phpdir}/config

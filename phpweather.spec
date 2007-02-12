@@ -1,7 +1,7 @@
 # TODO:
 # - apache configuration, relocation to /usr/share
 Summary:	Shows the current weather conditions on your Web page
-Summary(pl):	Pokazywanie aktualnej pogody na stronie WWW
+Summary(pl.UTF-8):   Pokazywanie aktualnej pogody na stronie WWW
 Name:		phpweather
 Version:	2.2.2
 Release:	1
@@ -25,14 +25,14 @@ makes it easily available in PHP scripts. You can display the data in
 several languages by using the included translations. You can also
 access the information with a WAP-enabled mobile phone.
 
-%description -l pl
-PHP Weather u³atwia pokazywanie aktualnej pogody na stronie WWW.
+%description -l pl.UTF-8
+PHP Weather uÅ‚atwia pokazywanie aktualnej pogody na stronie WWW.
 Program pobiera ostatni raport pogodowy METAR i konwertuje jego format
-na jednostki zarówno imperialne, jak i metryczne, zapamiêtuje dane w
+na jednostki zarÃ³wno imperialne, jak i metryczne, zapamiÄ™tuje dane w
 bazie MySQL, PostgreSQL lub DBA w celu szybkiego odczytywania i czyni
-je ³atwo dostêpne dla skryptów PHP. Mo¿na wy¶wietlaæ dane w kilku
-jêzykach u¿ywaj±c za³±czonych t³umaczeñ. Mo¿na tak¿e dostaæ siê do
-tych informacji przy u¿yciu telefonu komórkowego z obs³ug± WAP.
+je Å‚atwo dostÄ™pne dla skryptÃ³w PHP. MoÅ¼na wyÅ›wietlaÄ‡ dane w kilku
+jÄ™zykach uÅ¼ywajÄ…c zaÅ‚Ä…czonych tÅ‚umaczeÅ„. MoÅ¼na takÅ¼e dostaÄ‡ siÄ™ do
+tych informacji przy uÅ¼yciu telefonu komÃ³rkowego z obsÅ‚ugÄ… WAP.
 
 %prep
 %setup -q
